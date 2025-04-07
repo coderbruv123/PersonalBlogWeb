@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "hbidi9GqQEq+8SRToN2jTZAitmeJssOEGl+j6cSiUic=",
+  "Source": "PersonalBlogAPI",
+  "BasePath": "_content/PersonalBlogAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
