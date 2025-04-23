@@ -17,12 +17,10 @@ const Category = () => {
           key={index} 
           className="bg-gradient-to-r from-blue-700 to-blue-900 text-white flex items-center gap-6 p-7 rounded-2xl shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
         >
-          {/* Circular icon container */}
           <div className="bg-white rounded-full p-5 flex items-center justify-center shadow-md">
             {category.icon}
           </div>
 
-          {/* Text content */}
           <div>
             <a className="text-2xl font-bold">{category.name}</a>
             <p className="text-lg opacity-90 mt-1">{category.description}</p>

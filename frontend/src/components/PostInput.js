@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
 
-const PostInput = () => {
+const PostInput = ({loadPost}) => {
   const [Content, setContent] = useState("");
   const [Title, setTitle] = useState("");
+  const [Category, setcat] = useState("");
 
   const contentchange = (e) => {
     setContent(e.target.value);
@@ -12,29 +13,29 @@ const PostInput = () => {
   const Titlechange = (e) => {
     setTitle(e.target.value);
   };
-
-  // Function to format the date into "YYYY-MM-DDTHH:mm:ss"
-  const formatDate = (date) => {
-    return date.toISOString().split(".")[0]; // Format date and remove milliseconds
+  const categorychange = (e) => {
+    setcat(e.target.value);
   };
 
-  const showObj = async () => {
-    const updatedA = formatDate(new Date());
-    const uploadedA = formatDate(new Date());
-    console.log([{ Title, Content, uploadedA, updatedA }]);
+
+  
+
+
+ const showObj = async () => {
+    console.log([{ Title, Content, Category }]);
 
     try {
-      // Await the response from axios
       const response = await axios({
         method: 'post',
         url: 'https://localhost:7261/api/PostApi',
         data: {
           title: Title,
           content: Content,
-          uploadAt: uploadedA,
-          updatedAt: updatedA,
+          category: Category,
+      
         },
       });
+      loadPost();
       
       console.log("Post successful", response);
     } catch (ex) {
@@ -63,6 +64,15 @@ const PostInput = () => {
               onChange={contentchange}
               placeholder="Content"
               value={Content}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              rows="4"
+            />
+          </div>
+          <div>
+            <textarea
+              onChange={categorychange}
+              placeholder="Category"
+              value={Category}
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               rows="4"
             />

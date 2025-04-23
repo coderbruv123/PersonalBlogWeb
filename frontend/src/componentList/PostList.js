@@ -1,7 +1,7 @@
-import Post from './Post';
+import Post from '../components/Post';
 import {motion} from 'framer-motion'
 
-const PostList = ({ posts, Search, catg }) => {
+const PostList = ({ posts, Search, catg ,onClose,setShow}) => {
   const postsByCategory = catg && catg.trim()
     ? posts.filter(post => post.category.toLowerCase().includes(catg.toLowerCase()))
     : posts;
@@ -30,10 +30,9 @@ const PostList = ({ posts, Search, catg }) => {
          >
         <Post
           key={post.id}
-          content={post.content}
-          title={post.title}
-          uploadAt={post.uploadAt}
-          updatedAt={post.updatedAt}
+          post={post}
+          onClose={onClose}
+         setShow={setShow}
         />
           </motion.div>
       ))}
