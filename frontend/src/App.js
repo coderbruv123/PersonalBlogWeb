@@ -26,11 +26,11 @@ function App() {
 
   const [loading, setLoading]= useState(false);
   const [posts, setPosts]= useState([
-    {id: 1, title: 'Introduction', content: "Hello it's me prashant . Just a guy doing coding", category:"coding", uploadAt: '2025-03-06T10:05:41.563', updatedAt: '2025-03-06T10:05:41.563'},
-    {id: 2, title: 'Introduction', content: "Hello it's me prashant . Just a guy doing coding", category:"blog", uploadAt: '2025-03-06T10:05:41.563', updatedAt: '2025-03-06T10:05:41.563'},
-    {id: 3, title: 'Introduction', content: "Hello it's me prashant . Just a guy doing coding and this is gonna be the most anticipate fight of the generation",category:"experience", uploadAt: '2025-03-06T10:05:41.563', updatedAt: '2025-03-06T10:05:41.563'},
-    {id: 4, title: 'Introduction to the test1', content: "Hello it's me prashant . Just a guy doing coding", uploadAt: '2025-03-06T10:05:41.563', category:"coding", updatedAt: '2025-03-06T10:05:41.563'},
-    {id: 5, title: 'Introduction', content: "Hello it's me prashant . Just a guy doing coding", category:"experience", uploadAt: '2025-03-06T10:05:41.563', updatedAt: '2025-03-06T10:05:41.563'}
+    {id: 1, title: 'Introduction', imageUrl:"", content: "Hello it's me prashant . Just a guy doing coding", category:"coding", uploadAt: '2025-03-06T10:05:41.563', updatedAt: '2025-03-06T10:05:41.563'},
+    {id: 2, title: 'Introduction',imageUrl:"", content: "Hello it's me prashant . Just a guy doing coding", category:"blog", uploadAt: '2025-03-06T10:05:41.563', updatedAt: '2025-03-06T10:05:41.563'},
+    {id: 3, title: 'Introduction',imageUrl:"", content: "Hello it's me prashant . Just a guy doing coding and this is gonna be the most anticipate fight of the generation",category:"experience", uploadAt: '2025-03-06T10:05:41.563', updatedAt: '2025-03-06T10:05:41.563'},
+    {id: 4, title: 'Introduction to the test1',imageUrl:"", content: "Hello it's me prashant . Just a guy doing coding", uploadAt: '2025-03-06T10:05:41.563', category:"coding", updatedAt: '2025-03-06T10:05:41.563'},
+    {id: 5, title: 'Introduction', imageUrl:"", content: "Hello it's me prashant . Just a guy doing coding", category:"experience", uploadAt: '2025-03-06T10:05:41.563', updatedAt: '2025-03-06T10:05:41.563'}
   ]);
 
   const [showPost, setShow]= useState({});
@@ -73,10 +73,8 @@ function App() {
     </Routes>
 
     </div>
-    <Modal isVisible={isVisible} onClose={onClose}>
-        <h1 className='text-blue-500'>{showPost.title}</h1>
-        <h3 className='text-blue-500'>{showPost.content}</h3>
-        <h3 className='text-blue-500'>{showPost.category}</h3>
+    <Modal isVisible={isVisible} onClose={onClose} showPost={showPost}>
+       
         </Modal>
     {/* <PostView/> */}
     <Footer/>

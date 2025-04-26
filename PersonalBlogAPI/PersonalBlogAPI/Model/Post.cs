@@ -9,6 +9,8 @@
 
         public required string Category {get; set;}
 
+        public required string ImageUrl { get; set; }
+
         public DateTime UploadAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }

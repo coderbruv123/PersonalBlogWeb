@@ -19,7 +19,6 @@ namespace PersonalBlogAPI.Controllers
         }
 
         [HttpGet] 
-        // [Authorize]
         public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
         {
             try{
@@ -41,8 +40,9 @@ namespace PersonalBlogAPI.Controllers
              Post {
                 Title = post.Title,
                 Content = post.Content,
-                UploadAt = post.UploadAt,
-                UpdatedAt = post.UpdatedAt,
+                UploadAt = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow,
+                ImageUrl = post.ImageUrl,
                 Category = post.Category
             };
 
@@ -51,11 +51,12 @@ namespace PersonalBlogAPI.Controllers
 
           await _context.SaveChangesAsync();
 
-          var createdPost = new PostDTO{
+          var createdPost = new Post{
             Title = post.Title,
             Content= post.Content,
-            UpdatedAt= post.UpdatedAt,
-            UploadAt = post.UploadAt,
+            UpdatedAt= DateTime.UtcNow,
+            UploadAt = DateTime.UtcNow,
+            ImageUrl = post.ImageUrl,
             Category = post.Category
           };
             return CreatedAtAction(nameof(AddPost), new{id= newposts.Id}, createdPost);

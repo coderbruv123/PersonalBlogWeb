@@ -5,6 +5,7 @@ const PostInput = ({loadPost}) => {
   const [Content, setContent] = useState("");
   const [Title, setTitle] = useState("");
   const [Category, setcat] = useState("");
+  const [ImageUrl, setImageUrl]= useState("");
 
   const contentchange = (e) => {
     setContent(e.target.value);
@@ -77,7 +78,12 @@ const PostInput = ({loadPost}) => {
               rows="4"
             />
           </div>
+          <input
+        type="file"
+        
+        />
         </div>
+    
 
         <button
           onClick={showObj}

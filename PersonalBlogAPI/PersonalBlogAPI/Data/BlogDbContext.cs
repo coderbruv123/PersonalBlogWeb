@@ -8,5 +8,6 @@ namespace PersonalBlogAPI.Data
     {
        public BlogDbContext (DbContextOptions<BlogDbContext> options) : base(options) { }
        public DbSet<Post> Posts { get; set;}
+       public DbSet<User> Users { get; set; } 
     }
 }

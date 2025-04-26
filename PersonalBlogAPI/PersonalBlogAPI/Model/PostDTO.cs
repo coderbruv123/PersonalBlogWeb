@@ -7,8 +7,6 @@
         public required string Content { get; set; }
 
         public required string Category {get; set;}
-
-        public DateTime UploadAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public required string ImageUrl{get; set;}
     }
 }
