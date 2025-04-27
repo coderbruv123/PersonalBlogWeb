@@ -23,13 +23,13 @@ namespace PersonalBlogAPI.Controllers
         }
 
         [HttpPost("login")]
-        public  async Task <ActionResult<String>> Login(UserDTO request){
+        public  async Task <ActionResult<TokenResponseDto>> Login(UserDTO request){
 
-           var token= await authServices.LoginAsync(request);
-           if(token is null){
+           var result= await authServices.LoginAsync(request);
+           if(result is null){
             return BadRequest("Invalid username or password");
-            }
-            return Ok(token);
+            }                              
+            return Ok(result);
 
         }
 

@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -11,7 +12,7 @@ namespace PersonalBlogAPI.Services
     public class AuthService(BlogDbContext context, IConfiguration configuration) : IAuthServices
     {
 
-        public async Task<string?> LoginAsync(UserDTO request)
+        public async Task<TokenResponseDto?> LoginAsync(UserDTO request)
         {  
         var user = await context.Users.FirstOrDefaultAsync(x => x.Username == request.Username);
         if(user is null)
@@ -21,8 +22,12 @@ namespace PersonalBlogAPI.Services
        if(new PasswordHasher<User>().VerifyHashedPassword(user, user.Password, request.Password) == PasswordVerificationResult.Failed){
             return null;
         }
-    ;
-        return CreateToken(user);
+        var response = new TokenResponseDto
+        {
+            AccessToken = CreateToken(user),
+            RefreshToken = await GenerateandsaveRefreshToken(user)
+        };
+        return response;
               }
 
         public async Task<User?> RegisterAsync(UserDTO request)
@@ -42,6 +47,23 @@ namespace PersonalBlogAPI.Services
             await context.SaveChangesAsync();
             return user;        }
     
+        private string GenerateRefreshToken()
+        {
+            var randomNumber = new byte[32];
+          using var rng = RandomNumberGenerator.Create();
+         rng.GetBytes(randomNumber);
+             return Convert.ToBase64String(randomNumber);
+            
+        }
+
+        private async Task<string> GenerateandsaveRefreshToken(User user)
+        {
+            var refreshToken = GenerateRefreshToken();
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenExpiryTime = DateTime.Now.AddDays(7);
+            await context.SaveChangesAsync();
+            return refreshToken;
+        }
 
         private string CreateToken(User user){
             var claims = new List<Claim>{

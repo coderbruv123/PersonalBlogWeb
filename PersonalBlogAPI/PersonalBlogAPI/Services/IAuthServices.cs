@@ -6,6 +6,6 @@ namespace PersonalBlogAPI.Services
     {
 
         Task<User?> RegisterAsync(UserDTO request);
-        Task<string?> LoginAsync(UserDTO request); 
+        Task<TokenResponseDto?> LoginAsync(UserDTO request); 
     }
 }
