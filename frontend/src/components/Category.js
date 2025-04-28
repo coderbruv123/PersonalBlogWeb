@@ -9,26 +9,26 @@ const categories = [
 
 const Category = () => {
   return (
-    <>
+    <div className="flex flex-col justify-center items-center py-10 " >
     <h1 className="text-white py-5 text-4xl"> Categories</h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-10 px-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-10 px-10 max-h-[90vh] ">
       {categories.map((category, index) => (
           <div 
           key={index} 
-          className="bg-gradient-to-r from-blue-700 to-blue-900 text-white flex items-center gap-6 p-7 rounded-2xl shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          className="bg-gradient-to-r from-blue-700 to-blue-900 text-white flex items-center gap-6 p-10 rounded-2xl shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
         >
-          <div className="bg-white rounded-full p-5 flex items-center justify-center shadow-md">
+          <div className="bg-white rounded-full p-7 flex items-center justify-center shadow-md">
             {category.icon}
           </div>
 
           <div>
-            <a className="text-2xl font-bold">{category.name}</a>
-            <p className="text-lg opacity-90 mt-1">{category.description}</p>
+            <a className="text-4xl font-bold">{category.name}</a>
+            <p className="text-2xl opacity-90 mt-1 ">{category.description}</p>
           </div>
         </div>
       ))}
     </div>
-      </>
+      </div>
   );
 };
 

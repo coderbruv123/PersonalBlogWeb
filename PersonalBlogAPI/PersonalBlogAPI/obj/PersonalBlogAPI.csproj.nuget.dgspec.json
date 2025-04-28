@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\personalblogapi\\personalblogapi\\PersonalBlogAPI.csproj": {}
+    "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\PersonalBlogAPI\\PersonalBlogAPI\\PersonalBlogAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\personalblogapi\\personalblogapi\\PersonalBlogAPI.csproj": {
+    "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\PersonalBlogAPI\\PersonalBlogAPI\\PersonalBlogAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\personalblogapi\\personalblogapi\\PersonalBlogAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\PersonalBlogAPI\\PersonalBlogAPI\\PersonalBlogAPI.csproj",
         "projectName": "PersonalBlogAPI",
-        "projectPath": "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\personalblogapi\\personalblogapi\\PersonalBlogAPI.csproj",
+        "projectPath": "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\PersonalBlogAPI\\PersonalBlogAPI\\PersonalBlogAPI.csproj",
         "packagesPath": "C:\\Users\\Prazwal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\personalblogapi\\personalblogapi\\obj\\",
+        "outputPath": "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\PersonalBlogAPI\\PersonalBlogAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Prazwal\\AppData\\Roaming\\NuGet\\NuGet.Config"
