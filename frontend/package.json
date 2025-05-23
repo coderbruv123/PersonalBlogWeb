@@ -14,8 +14,7 @@
     "flowbite": "^3.1.2",
     "framer-motion": "^12.5.0",
     "lucide-react": "^0.485.0",
-    "particle.js": "^1.0.7",
-    "particles.js": "^2.0.0",
+   
     "react": "^19.0.0",
     "react-bits": "^1.0.5",
     "react-dom": "^19.0.0",

@@ -4873,24 +4873,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Prazwal\\.nuget\\packages\\": {}
+    "C:\\Users\\HP Victus\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\PersonalBlogAPI\\PersonalBlogAPI\\PersonalBlogAPI.csproj",
+      "projectUniqueName": "C:\\Users\\HP Victus\\OneDrive\\Documents\\Blog\\PersonalBlogWeb\\PersonalBlogAPI\\PersonalBlogAPI\\PersonalBlogAPI.csproj",
       "projectName": "PersonalBlogAPI",
-      "projectPath": "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\PersonalBlogAPI\\PersonalBlogAPI\\PersonalBlogAPI.csproj",
-      "packagesPath": "C:\\Users\\Prazwal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Prazwal\\Documents\\pras\\personalblog\\PersonalBlogAPI\\PersonalBlogAPI\\obj\\",
+      "projectPath": "C:\\Users\\HP Victus\\OneDrive\\Documents\\Blog\\PersonalBlogWeb\\PersonalBlogAPI\\PersonalBlogAPI\\PersonalBlogAPI.csproj",
+      "packagesPath": "C:\\Users\\HP Victus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP Victus\\OneDrive\\Documents\\Blog\\PersonalBlogWeb\\PersonalBlogAPI\\PersonalBlogAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Prazwal\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\HP Victus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4909,7 +4916,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -4967,7 +4974,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
