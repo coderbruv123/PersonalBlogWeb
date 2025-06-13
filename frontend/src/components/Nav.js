@@ -24,7 +24,7 @@ const Nav = ()  => {
                 </ul>
             </div>
             <div>
-                <button className='bg-blue-600  text-white px-5 py-2 hover:bg-blue-500 glow-text '>Sign in</button>
+                <Link className='bg-blue-600  text-white px-5 py-2 hover:bg-blue-500 glow-text ' to='/login'>Sign in</Link>
             </div>
         </nav>
     </div>

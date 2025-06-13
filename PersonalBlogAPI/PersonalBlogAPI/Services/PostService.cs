@@ -21,7 +21,7 @@ public class PostService : IPostServices
             Content = post.Content,
             UploadAt = DateTime.UtcNow,
             UpdatedAt = DateTime.UtcNow,
-            ImageUrl = post.ImageUrl,
+            ImageUrl = "",
             Category = post.Category
         };
 
@@ -49,7 +49,7 @@ public class PostService : IPostServices
         existingPost.Title = post.Title;
         existingPost.Content = post.Content;
         existingPost.UpdatedAt = DateTime.UtcNow;
-        existingPost.ImageUrl = post.ImageUrl;
+        existingPost.ImageUrl = "";
         existingPost.Category = post.Category;
 
         await _context.SaveChangesAsync();

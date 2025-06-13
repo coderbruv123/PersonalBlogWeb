@@ -33,13 +33,6 @@ namespace PersonalBlogAPI.Controllers
 
         }
 
-        [Authorize]
-        [HttpGet]
-        public IActionResult AuthenticatedOnlyEndpoint()
-        {
-          return Ok("You are authenticated!");
-        }
-        
-
+    
     }
 }

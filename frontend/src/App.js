@@ -76,7 +76,6 @@ function App() {
     <Modal isVisible={isVisible} onClose={onClose} showPost={showPost}>
        
         </Modal>
-    {/* <PostView/> */}
     <Footer/>
 
     </Router>

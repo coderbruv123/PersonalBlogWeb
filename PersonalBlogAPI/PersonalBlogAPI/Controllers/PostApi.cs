@@ -10,20 +10,12 @@ namespace PersonalBlogAPI.Controllers
     [ApiController]
     public class PostApi(IPostServices postServices) : ControllerBase
     {
-
-
-
-
-
         [HttpGet] 
         public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
         {
             try{
             var posts = await postServices.GetPostsAsync();
-            if (posts == null || !posts.Any())
-            {
-                return NotFound("No posts found.");
-            }
+            
 
             return Ok(posts);
             }
@@ -94,11 +86,7 @@ namespace PersonalBlogAPI.Controllers
        
     
 
-        // [HttpPatch("{id:int}")]
-        // public async Task<IActionResult> UpdatePost(int id, [FromBody] PostDTO updatedPost)
-        // {
-          
-        // }
+    
 
 
     }
